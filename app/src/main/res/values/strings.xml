@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Purrito</string>
+    <string name="cd_favorites">Favorites</string>
+    <string name="favorites_label">Favorites</string>
+    <string name="cd_dogs">Dogs</string>
+    <string name="dogs_label">Dogs</string>
+    <string name="cd_cats">Cats</string>
+    <string name="cats_label">Cats</string>
+    <string name="explore_label">Explore</string>
+    <string name="share_label">Share</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="remove">Remove</string>
+    <string name="remove_favorite_title">Remove from favorites?</string>
+    <string name="remove_favorite_message">This image will be removed from your favorites.</string>
+
+    <string name="transition_name">name-%s</string>
+    <string name="download_label">Download</string>
+
+    <string name="permission_dialog_title">Permission Request</string>
+    <string name="permission_dialog_message">Purrito needs storage permission to download this file. Go to Settings -> Permissions and check Storage and then try again.</string>
+    <string name="settings_label">Settings</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.bumptech.glide.request.RequestListener"/>
+        <import type="android.graphics.drawable.Drawable"/>
+        
+        <variable
+            name="viewModel"
+            type="com.aljon.purrito.ui.feeddetail.FeedDetailViewModel" />
+        
+        <variable
+            name="imageRequestListener"
+            type="com.bumptech.glide.request.RequestListener&lt;Drawable>" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/feed_image"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:transitionName="@{ viewModel.feed.url }"
+            tools:src="@tools:sample/backgrounds/scenic"
+            app:imageUrl="@{ viewModel.feed.url }"
+            app:requestListener="@{ imageRequestListener }"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

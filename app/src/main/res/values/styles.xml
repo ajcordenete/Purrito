@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="LightTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Change status bar to light BG || available only on api 23 and above -->
+        <item name="android:statusBarColor" tools:targetApi="M">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="M">true</item>
+
+        <item name="cardElevation">@dimen/material_elevation</item>
+        <item name="tabElevation">@dimen/material_elevation</item>
+        <item name="tabSelectedIconTint">@color/background</item>
+        <item name="tabUnselectedIconTint">@color/gray_light</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryVariant</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="background">@color/background</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorOnError">@color/colorOnError</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+
+        <item name="cardElevation">0dp</item>
+        <item name="tabElevation">0dp</item>
+        <item name="tabUnselectedIconTint">@color/gray_dark</item>
+        <item name="tabSelectedIconTint">@android:color/white</item>
+    </style>
+
+</resources>

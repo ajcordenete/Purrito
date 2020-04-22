@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="material_dimen_xxsmall">2dp</dimen>
+    <dimen name="material_dimen_xsmall">4dp</dimen>
+    <dimen name="material_dimen_small">8dp</dimen>
+    <dimen name="material_dimen_medium">12dp</dimen>
+    <dimen name="material_dimen_normal">16dp</dimen>
+    <dimen name="material_dimen_large">24dp</dimen>
+    <dimen name="material_dimen_xlarge">32dp</dimen>
+    <dimen name="material_dimen_xxlarge">48dp</dimen>
+    <dimen name="material_dimen_xxxlarge">72dp</dimen>
+
+    <dimen name="material_elevation">8dp</dimen>
+
+    <dimen name="list_item_spacing">4dp</dimen>
+    <dimen name="list_item_spacing_large">16dp</dimen>
+
+</resources>

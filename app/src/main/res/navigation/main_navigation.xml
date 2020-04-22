@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation"
+    app:startDestination="@id/tabFragment">
+
+    <fragment
+        android:id="@+id/tabFragment"
+        android:name="com.aljon.purrito.ui.TabFragment"
+        android:label="@string/explore_label">
+        <action
+            android:id="@+id/action_tabFragment_to_feedDetailFragment"
+            app:destination="@id/feedDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedDetailFragment"
+        android:name="com.aljon.purrito.ui.feeddetail.FeedDetailFragment"
+        android:label=" " >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>

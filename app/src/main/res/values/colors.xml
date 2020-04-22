@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C62828</color>
+    <color name="colorPrimaryVariant">#EF9A9A</color>
+    <color name="colorAccent">#90CAF9</color>
+
+    <color name="gray_dark">#FF424242</color>
+    <color name="gray_light">#808080</color>
+
+    <!-- Dark theme colors -->
+    <color name="background">#121212</color>
+    <color name="colorSurface">#1F1F1F</color>
+    <color name="colorError">#CF6679</color>
+    <color name="colorOnPrimary">#000000</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorOnBackground">#FFFFFF</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="colorOnError">#000000</color>
+    <color name="colorBackground">#121212</color>
+</resources>

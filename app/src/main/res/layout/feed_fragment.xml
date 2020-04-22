@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.aljon.purrito.ui.feed.base.FeedViewModel" />
+    </data>
+
+    <com.aljon.purrito.ScrollChildSwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/material_dimen_normal"
+        app:onRefreshListener="@{ viewModel::refresh }"
+        app:refreshing="@{ viewModel.isLoading() }">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feed_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/grid_item_feed_small"
+            tools:itemCount="5"/>
+    </com.aljon.purrito.ScrollChildSwipeRefreshLayout>
+
+
+
+
+</layout>
