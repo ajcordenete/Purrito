@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
     app:startDestination="@id/tabFragment">
 
     <fragment
         android:id="@+id/tabFragment"
         android:name="com.aljon.purrito.ui.TabFragment"
-        android:label="@string/explore_label">
+        android:label="@string/explore_label"
+        tools:layout="@layout/tab_fragment">
         <action
             android:id="@+id/action_tabFragment_to_feedDetailFragment"
             app:destination="@id/feedDetailFragment" />
+        <action
+            android:id="@+id/action_tabFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/feedDetailFragment"
         android:name="com.aljon.purrito.ui.feeddetail.FeedDetailFragment"
-        android:label=" " >
+        android:label=" "
+        tools:layout="@layout/feed_detail_fragment">
         <argument
             android:name="id"
             app:argType="string" />
@@ -23,4 +30,10 @@
             android:name="url"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.aljon.purrito.ui.SettingsFragment"
+        android:label="@string/settings_label"
+        tools:layout="@layout/settings_fragment"/>
 </navigation>
