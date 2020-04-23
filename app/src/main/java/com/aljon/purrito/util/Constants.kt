@@ -30,4 +30,7 @@ object Constants {
     val IMAGE_FILE_TYPE = listOf<String>("jpeg", "jpg", "png")
 
     const val PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 0x001;
+
+    const val PREF_NAME = "PurritoPreferences"
+    const val PREF_KEY_DARK_MODE_ON = "dark_mode_on"
 }

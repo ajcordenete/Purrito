@@ -1,12 +1,14 @@
 package com.aljon.purrito.di
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.room.Room
 import com.aljon.purrito.data.local.FeedDao
 import com.aljon.purrito.data.local.PurritoDatabase
 import com.aljon.purrito.data.remote.cat.CatFeedApi
 import com.aljon.purrito.data.remote.dog.DogFeedApi
 import com.aljon.purrito.util.Constants
+import com.aljon.purrito.util.SharedPreferenceUtil
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -81,6 +83,20 @@ object AppModule {
     @Provides
     fun provideFeedDao(database: PurritoDatabase): FeedDao {
         return database.feedDao()
+    }
+
+    @JvmStatic
+    @Singleton
+    @Provides
+    fun provideSharedPreference(context: Context): SharedPreferences {
+        return context.getSharedPreferences(Constants.PREF_NAME, Context.MODE_PRIVATE)
+    }
+
+    @JvmStatic
+    @Singleton
+    @Provides
+    fun provideSharedPreferenceUtil(sharedPreferences: SharedPreferences) : SharedPreferenceUtil {
+        return SharedPreferenceUtil(sharedPreferences)
     }
 
     @JvmStatic
