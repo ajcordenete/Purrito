@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.aljon.purrito.ui.SettingsFragment"
+        android:name="com.aljon.purrito.ui.settings.SettingsFragment"
         android:label="@string/settings_label"
         tools:layout="@layout/settings_fragment"/>
 </navigation>

@@ -26,7 +26,7 @@
     <string name="feedback_email_error">There are no email clients installed.</string>
     <string name="send_feedback_label">Send Feedback</string>
     <string name="about_label">About</string>
-    <string name="version_label">Peekfolio version</string>
+    <string name="version_label">Purrito version</string>
     <string name="open_source_licenses_label">Open source licenses</string>
     <string name="open_source_license_details">License details for open source software</string>
     <string name="general_label">General</string>

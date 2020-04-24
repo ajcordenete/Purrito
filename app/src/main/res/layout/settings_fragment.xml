@@ -2,6 +2,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.aljon.purrito.ui.settings.SettingsViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBaseline_toBaselineOf="@+id/dark_mode_label"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:checked="@={ viewModel.isDarkModeOn }"
+            android:onCheckedChanged="@{(button, bool)-> viewModel.saveDarkModeOn(bool)}"/>
 
         <View
             android:id="@+id/divider"
