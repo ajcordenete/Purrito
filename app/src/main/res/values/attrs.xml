@@ -8,4 +8,6 @@
     <attr name="text_high_emphasis" format="color"/>
     <attr name="text_med_emphasis" format="color"/>
     <attr name="text_disable_emphasis" format="color"/>
+
+    <attr name="placeholder_color" format="color"/>
 </resources>

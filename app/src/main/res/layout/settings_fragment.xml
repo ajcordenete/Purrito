@@ -105,7 +105,7 @@
             android:text="@string/open_source_license_details"
             app:layout_constraintTop_toBottomOf="@id/open_sources_label"/>
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/terms_of_use_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
             android:textColor="?attr/text_high_emphasis"
             android:text="Terms of Service"
             app:layout_constraintTop_toBottomOf="@id/open_source_text"
-            android:layout_marginTop="@dimen/material_dimen_large"/>
+            android:layout_marginTop="@dimen/material_dimen_large"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

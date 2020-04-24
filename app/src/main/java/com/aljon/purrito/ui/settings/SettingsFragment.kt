@@ -56,7 +56,6 @@ class SettingsFragment: DaggerFragment() {
     private fun initClickListeners() {
         binding.openSourceText.setOnClickListener { launchOpenSourceIntent() }
         binding.openSourcesLabel.setOnClickListener { launchOpenSourceIntent() }
-        binding.termsOfUseText.setOnClickListener { launchTermsOfUserPage() }
     }
 
     private fun launchOpenSourceIntent() {
