@@ -38,6 +38,8 @@
         <item name="tabUnselectedIconTint">@color/gray_dark</item>
         <item name="tabSelectedIconTint">@android:color/white</item>
 
+        <item name="android:windowLightStatusBar" tools:targetApi="M">false</item>
+
         <item name="text_high_emphasis">@color/dark_text_high_emphasis</item>
         <item name="text_med_emphasis">@color/dark_text_med_emphasis</item>
         <item name="text_disable_emphasis">@color/dark_text_disable_emphasis</item>
