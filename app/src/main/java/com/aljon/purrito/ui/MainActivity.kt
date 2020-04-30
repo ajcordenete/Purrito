@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.View
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -14,7 +15,9 @@ import com.aljon.purrito.util.Constants
 import com.aljon.purrito.util.SharedPreferenceUtil
 import com.google.android.gms.ads.*
 import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import dagger.android.support.DaggerAppCompatActivity
+import timber.log.Timber
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity() {
@@ -104,10 +107,17 @@ class MainActivity : DaggerAppCompatActivity() {
 
     fun showBanner() {
         adView.visibility = View.VISIBLE
+        slideBannerUp()
     }
 
     fun hideBanner() {
         adView.visibility = View.GONE
+    }
+
+    private fun slideBannerUp() {
+        val layoutParams = binding.adContainer.layoutParams as CoordinatorLayout.LayoutParams
+        val bottomViewNavigationBehavior = layoutParams.behavior as HideBottomViewOnScrollBehavior
+        bottomViewNavigationBehavior.slideUp(binding.adContainer)
     }
 
     // Determine the screen width (less decorations) to use for the ad width.
