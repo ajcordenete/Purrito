@@ -1,5 +1,6 @@
 package com.aljon.purrito.ui.favorite
 
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.viewModelScope
 import com.aljon.purrito.data.domain.Feed
 import com.aljon.purrito.repository.FeedRepository
@@ -10,6 +11,10 @@ import javax.inject.Inject
 class FavoritesViewModel @Inject constructor(private val feedRepository: FeedRepository): BaseViewModel() {
 
     val favorites = feedRepository.getAllFavorites()
+
+    val empty = Transformations.map(favorites) {
+        it.isNullOrEmpty()
+    }
 
     fun toggleFavorite(feed: Feed) = viewModelScope.launch {
         feedRepository.toggleFavorite(feed)

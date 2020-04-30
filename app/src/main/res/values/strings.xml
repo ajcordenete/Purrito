@@ -31,4 +31,6 @@
     <string name="open_source_license_details">License details for open source software</string>
     <string name="general_label">General</string>
     <string name="dark_mode_label">Dark Mode</string>
+    <string name="your_favorites_live_here">Your Favorites will live here</string>
+    <string name="explore_thousands_of_photos">Explore thousands of cat and dog photos and add them to your favorites.</string>
 </resources>

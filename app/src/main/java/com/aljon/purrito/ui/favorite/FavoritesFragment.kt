@@ -23,6 +23,7 @@ import com.aljon.purrito.view.safeNavigate
 import com.aljon.purrito.view.showAlertDialog
 import com.aljon.purrito.view.waitForTransition
 import kotlinx.android.synthetic.main.favorites_fragment.*
+import timber.log.Timber
 import javax.inject.Inject
 
 class FavoritesFragment: BaseFragment() {
@@ -39,6 +40,8 @@ class FavoritesFragment: BaseFragment() {
         binding.lifecycleOwner = this.viewLifecycleOwner
 
         binding.viewModel = viewModel
+
+        viewModel.empty.observe(viewLifecycleOwner, Observer { Timber.i("empty: $it") })
 
         return binding.root
     }

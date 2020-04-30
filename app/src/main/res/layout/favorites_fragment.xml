@@ -5,6 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.view.View"/>
+
         <variable
             name="viewModel"
             type="com.aljon.purrito.ui.favorite.FavoritesViewModel" />
@@ -15,9 +17,12 @@
         android:layout_height="match_parent"
         android:paddingBottom="@dimen/material_dimen_xxlarge">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <include
+            android:id="@+id/empty_favorites"
+            layout="@layout/empty_favorites_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{ viewModel.empty ? View.VISIBLE : View.GONE }"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/favorite_list"
