@@ -17,4 +17,8 @@
     <color name="colorOnSurface">#FFFFFF</color>
     <color name="colorOnError">#000000</color>
     <color name="colorBackground">#121212</color>
+
+    <color name="dark_text_high_emphasis">#D9FFFFFF</color>
+    <color name="dark_text_med_emphasis">#99FFFFFF</color>
+    <color name="dark_text_disable_emphasis">#66FFFFFF</color>
 </resources>

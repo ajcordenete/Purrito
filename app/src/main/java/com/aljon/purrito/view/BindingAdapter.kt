@@ -4,6 +4,8 @@ import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import com.aljon.purrito.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
@@ -14,8 +16,12 @@ import com.bumptech.glide.request.RequestOptions
 @BindingAdapter("imageUrl")
 fun bindImageUrl(imageView: ImageView, url: String?) {
     url?.let {
+
         Glide.with(imageView.context)
             .load(url)
+            .apply(
+                RequestOptions().placeholder(R.color.gray_light)
+            )
             .into(imageView)
     }
 }

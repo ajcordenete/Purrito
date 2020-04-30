@@ -1,0 +1,121 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.aljon.purrito.ui.settings.SettingsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/material_dimen_normal">
+
+        <TextView
+            android:id="@+id/general_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="?attr/text_med_emphasis"
+            android:layout_marginTop="@dimen/material_dimen_large"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/general_label"/>
+
+        <TextView
+            android:id="@+id/dark_mode_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="?attr/text_high_emphasis"
+            android:text="@string/dark_mode_label"
+            app:layout_constraintTop_toBottomOf="@id/general_label"
+            android:layout_marginTop="@dimen/material_dimen_normal"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/dark_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/dark_mode_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:checked="@={ viewModel.isDarkModeOn }"
+            android:onCheckedChanged="@{(button, bool)-> viewModel.saveDarkModeOn(bool)}"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            style="@style/Divider"
+            app:layout_constraintTop_toBottomOf="@id/dark_mode_label"
+            android:layout_marginTop="@dimen/material_dimen_large"/>
+
+        <TextView
+            android:id="@+id/about_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="?attr/text_med_emphasis"
+            android:layout_marginTop="@dimen/material_dimen_large"
+            android:text="@string/about_label"/>
+
+        <TextView
+            android:id="@+id/version_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="?attr/text_high_emphasis"
+            android:text="@string/version_label"
+            app:layout_constraintTop_toBottomOf="@id/about_label"
+            android:layout_marginTop="@dimen/material_dimen_normal"/>
+
+        <TextView
+            android:id="@+id/version_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="?attr/text_med_emphasis"
+            android:text="@string/APP_VERSION"
+            app:layout_constraintTop_toBottomOf="@id/version_label"/>
+
+        <TextView
+            android:id="@+id/open_sources_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="?attr/text_high_emphasis"
+            android:text="@string/open_source_licenses_label"
+            app:layout_constraintTop_toBottomOf="@id/version_text"
+            android:layout_marginTop="@dimen/material_dimen_large"/>
+
+        <TextView
+            android:id="@+id/open_source_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="?attr/text_med_emphasis"
+            android:text="@string/open_source_license_details"
+            app:layout_constraintTop_toBottomOf="@id/open_sources_label"/>
+
+       <!-- <TextView
+            android:id="@+id/terms_of_use_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="?attr/text_high_emphasis"
+            android:text="Terms of Service"
+            app:layout_constraintTop_toBottomOf="@id/open_source_text"
+            android:layout_marginTop="@dimen/material_dimen_large"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

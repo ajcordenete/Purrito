@@ -19,4 +19,16 @@
     <string name="permission_dialog_title">Permission Request</string>
     <string name="permission_dialog_message">Purrito needs storage permission to download this file. Go to Settings -> Permissions and check Storage and then try again.</string>
     <string name="settings_label">Settings</string>
+    <string name="rate_us_label">Rate Us</string>
+
+    <string name="feedback_email_title">Peekfolio - Feedback</string>
+    <string name="feedback_email_address">dev.peekfolio@gmail.com</string>
+    <string name="feedback_email_error">There are no email clients installed.</string>
+    <string name="send_feedback_label">Send Feedback</string>
+    <string name="about_label">About</string>
+    <string name="version_label">Purrito version</string>
+    <string name="open_source_licenses_label">Open source licenses</string>
+    <string name="open_source_license_details">License details for open source software</string>
+    <string name="general_label">General</string>
+    <string name="dark_mode_label">Dark Mode</string>
 </resources>

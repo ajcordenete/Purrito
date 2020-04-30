@@ -13,6 +13,9 @@
         <item name="tabElevation">@dimen/material_elevation</item>
         <item name="tabSelectedIconTint">@color/background</item>
         <item name="tabUnselectedIconTint">@color/gray_light</item>
+
+        <item name="text_high_emphasis">?attr/colorOnSurface</item>
+        <item name="text_med_emphasis">@color/gray_light</item>
     </style>
 
     <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
@@ -34,6 +37,22 @@
         <item name="tabElevation">0dp</item>
         <item name="tabUnselectedIconTint">@color/gray_dark</item>
         <item name="tabSelectedIconTint">@android:color/white</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="M">false</item>
+
+        <item name="text_high_emphasis">@color/dark_text_high_emphasis</item>
+        <item name="text_med_emphasis">@color/dark_text_med_emphasis</item>
+        <item name="text_disable_emphasis">@color/dark_text_disable_emphasis</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">@color/gray_light</item>
+        <item name="alpha">0.10</item>
+        <item name="android:height">1dp</item>
+    </style>
+
+    <style name="SplashTheme" parent="LightTheme">
+        <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
 </resources>

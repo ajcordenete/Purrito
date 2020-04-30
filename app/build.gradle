@@ -22,6 +22,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        resValue "string", "APP_VERSION", versionName
     }
 
     android {
@@ -111,6 +113,8 @@ dependencies {
 
     // Image Loading
     implementation "com.github.bumptech.glide:glide:$version_glide"
+    implementation "com.github.bumptech.glide:annotations:$version_glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$version_glide"
 
     //Logging
     implementation "com.jakewharton.timber:timber:$verion_timber"
