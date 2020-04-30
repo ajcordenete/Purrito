@@ -6,6 +6,14 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 
 android {
+    signingConfigs {
+        prod {
+            storeFile file('D:\\AndroidProjects\\keys\\purrito\\purrito_keystore.jks')
+            storePassword 'Lock3d15'
+            keyAlias = 'purrito'
+            keyPassword 'Lock3d15'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
 
@@ -24,6 +32,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         resValue "string", "APP_VERSION", versionName
+        resValue "string", "ADMOB_APP_ID", "ca-app-pub-8582049880601215~5426246296"
     }
 
     android {
@@ -42,6 +51,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "INSTERTITIAL_AD_ID", '"ca-app-pub-8582049880601215/7860837940"'
+            buildConfigField "String", "BANNER_AD_ID", '"ca-app-pub-8582049880601215/1491936376"'
+            signingConfig signingConfigs.prod
+        }
+
+        debug {
+            debuggable true
+            buildConfigField "String", "INSTERTITIAL_AD_ID", '"ca-app-pub-3940256099942544/1033173712"'
+            buildConfigField "String", "BANNER_AD_ID", '"ca-app-pub-3940256099942544/6300978111"'
         }
     }
 
@@ -111,6 +129,9 @@ dependencies {
     implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
 
+    //ads view
+    implementation "com.google.android.gms:play-services-ads:$version_ad_view"
+
     // Image Loading
     implementation "com.github.bumptech.glide:glide:$version_glide"
     implementation "com.github.bumptech.glide:annotations:$version_glide"
@@ -131,9 +152,6 @@ dependencies {
     // Room database
     implementation "androidx.room:room-runtime:$version_room"
     kapt "androidx.room:room-compiler:$version_room"
-
-    //ads view
-    //implementation 'com.google.android.gms:play-services-ads:19.0.1'
 
     //Zoom image view
     implementation "com.github.chrisbanes:PhotoView:$version_photo_view"

@@ -34,6 +34,7 @@ class TabFragment: Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initTabs()
+        (activity as MainActivity).showBanner()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

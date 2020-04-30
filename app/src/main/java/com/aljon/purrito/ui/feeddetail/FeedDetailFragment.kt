@@ -76,6 +76,7 @@ class FeedDetailFragment: DaggerFragment() {
         super.onActivityCreated(savedInstanceState)
         setUpMenuActions()
         viewModel.initFeed(args.id, args.url)
+        (activity as MainActivity).hideBanner()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -208,7 +209,8 @@ class FeedDetailFragment: DaggerFragment() {
         } else {
             message = Constants.DOWNLOAD_FAILED
         }
-        view?.showSnackbar(message, Snackbar.LENGTH_SHORT)
+        view?.showSnackbar(message, Snackbar.LENGTH_LONG)
+        (activity as MainActivity).showInterstitialAd()
     }
 
     private fun showPermissionNotGrantedInfo() {

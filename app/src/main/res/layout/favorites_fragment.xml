@@ -10,13 +10,24 @@
             type="com.aljon.purrito.ui.favorite.FavoritesViewModel" />
     </data>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/favorite_list"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="@dimen/material_dimen_normal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/list_favorite_item"
-        tools:itemCount="5"/>
+        android:paddingBottom="@dimen/material_dimen_xxlarge">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favorite_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/material_dimen_normal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_favorite_item"
+            tools:itemCount="5"/>
+
+    </FrameLayout>
 
 </layout>

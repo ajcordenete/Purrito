@@ -39,6 +39,7 @@ buildscript {
         version_expresso = '3.2.0-beta01'
         version_paging = "2.1.2"
         version_photo_view = "2.3.0"
+        version_ad_view = "19.0.1"
 
         androidXVersion = '1.0.0'
         androidXTestRulesVersion = '1.2.0-beta01'
